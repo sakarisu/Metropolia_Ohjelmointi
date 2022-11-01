@@ -16,20 +16,20 @@ class Auto:
     def __str__(self):
         return f'{self.rekkari} \n {self.huiput} \n {self.nopeus} \n {self.kilsat}'
 class Kilpailu:
-    def __init__(self, nimi, matka, autot):
+    def __init__(self, nimi, pituus, autot):
         self.nimi = nimi
-        self.matka = matka
+        self.pituus = pituus
         self.autot = autot
     def tunti_kuluu(self):
-        for i in self.autot:
+        for i in autot:
             i.kiihdyta(random.randint(-10, 15))
             i.kulje(1)
-    def tilanne(self):
-        for i in self.autot:
+    def tulosta_tilanne(self):
+        for i in autot:
             print(i)
     def kilpailu_ohi(self):
-        for i in self.autot:
-            if i.kilsat > self.matka:
+        for i in autot:
+            if i.kilsat <= self.pituus:
                 return True
 autot = []
 reknum = 0
@@ -42,9 +42,9 @@ tunteja = 10
 while not kilpailuOhi:
     kisa.tunti_kuluu()
     if kisa.kilpailu_ohi():
-        kisa.tilanne()
+        kisa.tulosta_tilanne()
         kilpailuOhi = True
     if tunteja == 10:
         tunteja = 0
-        kisa.tilanne()
+        kisa.tulosta_tilanne()
     tunteja += 1
