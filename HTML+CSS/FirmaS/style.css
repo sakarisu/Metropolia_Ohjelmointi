@@ -1,0 +1,129 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/*Vars*/
+:root{
+    --dark: #030303;
+    --red: #E7756F;
+    --pink: #ED1E7D;
+    --green: #50B948;
+    --blue: #67B2B2;
+    --grey: #616586;
+}
+
+/*Body*/
+body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--dark);
+    text-shadow: 0 0 4px var(--green);
+    padding-bottom: 50px;
+}
+
+/*Divs*/
+.body > div {
+    padding: 0 0;
+    font-size: 30px;
+    font-family: 'Major Mono Display', monospace;
+    color: #67B2B2;
+    text-shadow: 0 0 4px var(--pink)
+  }
+
+/*Grid items*/
+
+/*Title*/
+.title{
+    grid-area: title;
+    text-align: left;
+    background-color: var(--green);
+    color: #121C16;
+    text-shadow: 0 0 4px var(--green)
+}
+
+.title > h1{
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Major Mono Display', monospace;
+    color: #121C16;
+    text-shadow: 0 0 4px var(--green)
+}
+
+/*Navigation*/
+
+.nav > a > button{
+    font-size: 20px;
+    border: none;
+    background-color: var(--green);
+    padding: 40px 50px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.nav > a > button:hover{
+    background-color: var(--dark);
+    color: #E7756F;
+}
+
+.nav{
+    grid-area: nav;
+    text-align: right;
+    background-color: var(--green)
+}
+
+/*Main doc*/
+.main{
+    grid-area: main;
+    text-align: center;
+}
+.main > h2{
+    text-align: left;
+    font-size: 25px;
+}
+/*Site body*/
+.body {
+    display: grid;
+    grid-template-areas:
+        'title nav nav nav'
+        'main main main main';
+    background-color: transparent;
+}
+
+/*Ids*/
+#left {
+    margin: 225px;
+    padding: 50px;
+    height: 775px;
+    width: 300px;
+    background-color: var(--red);
+    border-radius: 25px;
+}
+#left > h1{
+    text-shadow: 0 0 4px var(--grey);
+    color: #121C16;
+}
+#center {
+    margin: 225px;
+    padding: 50px;
+    height: 775px;
+    width: 300px;
+    background-color: var(--red);
+    border-radius: 25px;
+}
+#center > h1{
+    text-shadow: 0 0 4px var(--grey);
+    color: #121C16;
+}
+#right {
+    margin: 225px;
+    padding: 50px;
+    height: 775px;
+    width: 300px;
+    background-color: var(--red);
+    border-radius: 25px;
+}
+#right > h1{
+    text-shadow: 0 0 4px var(--grey);
+    color: #121C16;
+}
