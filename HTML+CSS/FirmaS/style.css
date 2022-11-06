@@ -13,8 +13,8 @@
 
 /*Body*/
 body{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -91,6 +91,12 @@ body{
 }
 
 /*Ids*/
+#bg {
+    background-image:
+    linear-gradient(to bottom, transparent, var(--dark)),
+    url("https://wallpaperaccess.com/full/3803816.jpg");
+    background-size: cover;
+}
 #left {
     margin: 225px;
     padding: 50px;
