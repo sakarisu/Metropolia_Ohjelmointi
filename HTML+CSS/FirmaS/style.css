@@ -53,15 +53,17 @@ body{
 
 /*Navigation*/
 
-.nav > a > button{
-    font-size: 20px;
+.nav > a {
+    font-size: 30px;
     border: none;
     background-color: var(--green);
-    padding: 40px 50px;
+    padding: 60px 60px;
     font-family: 'Major Mono Display', monospace;
+    color: #030303;
+    text-shadow: none;
 }
 
-.nav > a > button:hover{
+.nav > a:hover {
     background-color: var(--dark);
     color: #E7756F;
 }
