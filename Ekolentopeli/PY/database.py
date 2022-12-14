@@ -12,7 +12,7 @@ class Database:
             port=3000,
             database='ekolento',
             user='root',
-            password='0532189764',
+            password='',
             autocommit=True
         )
 
