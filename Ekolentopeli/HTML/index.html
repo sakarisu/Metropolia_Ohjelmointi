@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Ekolentopeli</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="otsikko">
+        <h1><ion-icon name="leaf-outline"></ion-icon> Ekolentopeli <ion-icon name="leaf-outline"></ion-icon></h1>
+        <nav>
+            <ul class="flex-wrap space-evenly">
+                <li>
+                    <a class="button" href="index.html">Peli</a>
+                </li>
+                <li>
+                    <a class="button" href="about.html">Tietoja</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-wrap">
+        <div id="map">
+
+        </div>
+        <div class="laatikot">
+            <section class="laatikko">
+                <header>
+                    <h2>Pelin tila</h2>
+                </header>
+                <table>
+                    <tr>
+                        <h3>Pelaajan nimi: <span id="pelaaja-nimi"></span></h3>
+                    </tr>
+                    <tr>
+                        <td>Polttoaineen kulutus litroissa viime matkalta: <span id="kulutus"> </span></td>
+                        <td>Hiilidioksidipäästöjen määrä kilogrammoissa viime matkalta: <span id="paastot"> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Polttoaineen kulutus litroissa yhteensä: <span id="kulutus-yht">0</span></td>
+                        <td>Hiilidioksidipäästöjen määrä kilogrammoissa yhteensä: <span id="paastot-yht">0</span></td>
+                    </tr>
+                </table>
+            </section>
+            <section class="laatikko">
+                <header>
+                    <h2>Käydyt maanosat</h2>
+                </header>
+                <ul id="maanosat" class="flex-wrap">
+                    <li id="Aasia" class="hidden">Aasia</li>
+                    <li id="Afrikka" class="hidden">Afrikka</li>
+                    <li id="P-amerikka" class="hidden">Pohjois-Amerikka</li>
+                    <li id="E-amerikka" class="hidden">Etelä-Amerikka</li>
+                    <li id="Eurooppa" class="hidden">Eurooppa</li>
+                    <li id="Oseania" class="hidden">Oseania</li>
+                    <li id="Antarktika" class="hidden">Antarktika</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="sivu-footer">
+        <p></p>
+    </footer>
+</div>
+<div id="pelaaja-modal" class="hide">
+    <form id="pelaaja-form">
+        <input type="text" placeholder="Pelaajan nimi" required>
+        <input type="submit" value="Aloita peli">
+    </form>
+</div>
+</body>
+</html>
