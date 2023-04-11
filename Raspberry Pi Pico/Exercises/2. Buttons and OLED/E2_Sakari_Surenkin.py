@@ -21,7 +21,6 @@ def interrupt(pin):
     leds_states = [0, 0, 0]
     for led in leds:
         led.value(0)
-    updateDisplay()
     
 rotary.irq(trigger=Pin.IRQ_FALLING, handler=interrupt)
 
