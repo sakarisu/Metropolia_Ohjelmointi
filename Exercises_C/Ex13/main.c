@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-//This program reads integers from a text file and prints the highest and lowest numbers
+
 int main()
 {       //Main loop
     char filename[100];
