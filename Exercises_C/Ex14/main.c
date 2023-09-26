@@ -5,7 +5,7 @@
 #define MAX_LINES 100
 #define MAX_LINE_LENGTH 80
 
-int main()    //This program reads a text file and converts all lower case characters to upper case
+int main()
 {       //Main loop
     char lines[MAX_LINES][MAX_LINE_LENGTH];
     int line_count = 0;
